@@ -1,0 +1,16 @@
+{
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "$domain_name",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "$elb_hosted_zone_id",
+          "DNSName": "$elb_dns_name",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}

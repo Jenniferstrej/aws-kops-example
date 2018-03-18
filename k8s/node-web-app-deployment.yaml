@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2 # I was getting an error with v1
+kind: Deployment
+metadata:
+  name: node-web-app-deployment
+  labels:
+    app: node-web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-web-app
+  template:
+    metadata:
+      labels:
+        app: node-web-app
+    spec:
+      containers:
+      - name: node-web-app
+        image: jenniferstrej/node-web-app
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,16 @@
+{
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "myapp.jenninha.net",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z32O12XQLNTSW2",
+          "DNSName": "a9cf5ac382ad411e8adfe0abe7dced74-308556843.eu-west-1.elb.amazonaws.com",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}
