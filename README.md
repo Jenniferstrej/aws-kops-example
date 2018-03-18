@@ -23,6 +23,7 @@ We are using [kops with AWS](https://github.com/kubernetes/kops/blob/master/docs
 Using `start.sh.template` as a template, create a file called `start.sh` and add your preferred variables and set up domains:
 
 ```
+export terraform_state_bucket=preffered-tf-state-bucket
 export TF_VAR_prefix=prod
 export TF_VAR_domain=yourdomain.com
 export subdomain=subdomain.yourdomain.com
@@ -32,6 +33,7 @@ export hosted_zone_id=Check_your_zone_ID_in_Route53
 export availability_zones=eu-west-1a,eu-west-1b
 export kops_cluster_name=kops-node-cluster
 ```
+ - terraform_state_bucket: The name of a bucket where terraform will store its state (we create this in the next section)
  - TF_VAR_prefix: Your prefix, in case you want to run different environments in different states
 
  - TF_VAR_domain: this will also be used as your kops domain when [Configuring DNS for kops](https://github.com/kubernetes/kops/blob/master/docs/aws.md#configure-dns). For simplicity, this example is using a domain registered on AWS. If you would like to configure DNS differently, see this section https://github.com/kubernetes/kops/blob/master/docs/aws.md#configure-dns
