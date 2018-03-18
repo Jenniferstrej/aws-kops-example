@@ -2,8 +2,6 @@
 
 * [Terraform](https://www.terraform.io/) - tested with Terraform v0.11.4 and provider.aws v1.11.0
 
-* [Docker](https://www.docker.com/) - tested with Docker version 17.06.0-ce
-
 * [kops, kubectl, awscli](https://github.com/kubernetes/kops/blob/master/docs/install.md) tested kops Version 1.8.1, kubectl 1.9.3, aws-cli/1.14.57
 
 * [Python](https://www.python.org/) tested with Python 2.7
