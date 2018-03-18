@@ -119,6 +119,8 @@ Wait for about 5-10 minutes for the kops DNS to propagate and your cluster to be
 watch -b -n 30 kops validate cluster --state s3://${TF_VAR_prefix}-${TF_VAR_kops_state}
 ```
 
+_Problems you might have: You may get the validate cluster command returning "Unable to validate cluster" for more than 10min. In this situation you may need to flush your DNS cache, on a Mac this can be done with `sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;`_
+
 # Service
 
 ## k8s deployment
