@@ -1,3 +1,4 @@
+export terraform_state_bucket=preffered-tf-state-bucket
 export subdomain=subdomain.yourdomain.com
 export hosted_zone_id=Check_your_zone_ID_in_Route53
 export TF_VAR_prefix=prod
