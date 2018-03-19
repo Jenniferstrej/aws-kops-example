@@ -195,10 +195,11 @@ The only chargeable resource left is the terraform state file that has been crea
 After that, make sure you delete your `.terraform` folder.
 
 
-## Other things to consider later
+## What's next
 
 1) SSL termination to the Load balancer;
 2) caching;
 3) the VPC provisioning in Terraform so then I can use the same VPC for other resources that I may need to create (databases, etc.), then provide it as a parameter to kops;
 4) Monitoring (i.e. Prometheus, Riemann, Cloudwatch)
-4) Add CI pipeline to deploy container.
+5) Add CI pipeline to deploy container.
+6) Change the permission for kops user and discover exactly what it needs as I don't like that it needs `IAMFullAccess`.
